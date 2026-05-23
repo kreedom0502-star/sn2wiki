@@ -1,42 +1,99 @@
-[
-  {
-    "id": "point-silver",
-    "name": "银矿样例点",
-    "type": "resource",
-    "x": 34,
-    "y": 42,
-    "area": "待实测区域",
-    "note": "用于演示资源点筛选，正式坐标后续替换。",
-    "link": "resources.html#silver"
-  },
-  {
-    "id": "point-scanner",
-    "name": "扫描器蓝图样例",
-    "type": "blueprint",
-    "x": 58,
-    "y": 35,
-    "area": "待实测区域",
-    "note": "用于演示蓝图点位弹窗。",
-    "link": "blueprints.html"
-  },
-  {
-    "id": "point-base",
-    "name": "前期基地候选区",
-    "type": "base",
-    "x": 46,
-    "y": 62,
-    "area": "待评估区域",
-    "note": "后续按资源密度、危险度和交通路线评分。",
-    "link": "guides/index.html"
-  },
-  {
-    "id": "point-danger",
-    "name": "危险区域样例",
-    "type": "danger",
-    "x": 71,
-    "y": 55,
-    "area": "待实测区域",
-    "note": "用于提示高风险生物或深度限制。",
-    "link": "map.html"
-  }
-]
+{
+  "schemaVersion": 1,
+  "kind": "map-points",
+  "updatedAt": "2026-05-23",
+  "records": [
+    {
+      "id": "map-silver-sample",
+      "name": "银矿样例点",
+      "aliases": ["silver sample point"],
+      "category": "resource",
+      "pointType": "resource",
+      "stage": "early",
+      "version": "unknown",
+      "status": "placeholder",
+      "lastVerified": null,
+      "summary": "用于演示资源点筛选，正式坐标后续替换。",
+      "position": {
+        "xPercent": 34,
+        "yPercent": 42
+      },
+      "gameCoordinates": null,
+      "areaName": "待实测区域",
+      "riskLevel": "unknown",
+      "linkedRecordIds": ["silver-ore"],
+      "routeHint": "等待游戏内实测路线。",
+      "relatedGuides": ["resources.html#silver-ore"],
+      "notes": "占位点位，不代表真实资源位置。"
+    },
+    {
+      "id": "map-scanner-sample",
+      "name": "扫描器蓝图样例",
+      "aliases": ["scanner blueprint point"],
+      "category": "blueprint",
+      "pointType": "blueprint",
+      "stage": "early",
+      "version": "unknown",
+      "status": "placeholder",
+      "lastVerified": null,
+      "summary": "用于演示蓝图点位弹窗。",
+      "position": {
+        "xPercent": 58,
+        "yPercent": 35
+      },
+      "gameCoordinates": null,
+      "areaName": "待实测区域",
+      "riskLevel": "unknown",
+      "linkedRecordIds": ["scanner"],
+      "routeHint": "等待游戏内实测路线。",
+      "relatedGuides": ["blueprints.html"],
+      "notes": "占位点位，不代表真实蓝图位置。"
+    },
+    {
+      "id": "map-base-candidate-sample",
+      "name": "前期基地候选区",
+      "aliases": ["base candidate"],
+      "category": "base",
+      "pointType": "base",
+      "stage": "early",
+      "version": "unknown",
+      "status": "placeholder",
+      "lastVerified": null,
+      "summary": "后续按资源密度、危险度和交通路线评分。",
+      "position": {
+        "xPercent": 46,
+        "yPercent": 62
+      },
+      "gameCoordinates": null,
+      "areaName": "待评估区域",
+      "riskLevel": "unknown",
+      "linkedRecordIds": ["base-builder"],
+      "routeHint": "等待基地选址实测。",
+      "relatedGuides": ["guides/index.html"],
+      "notes": "用于展示基地推荐点位的数据结构。"
+    },
+    {
+      "id": "map-danger-sample",
+      "name": "危险区域样例",
+      "aliases": ["danger sample"],
+      "category": "danger",
+      "pointType": "danger",
+      "stage": "unknown",
+      "version": "unknown",
+      "status": "placeholder",
+      "lastVerified": null,
+      "summary": "用于提示高风险生物或深度限制。",
+      "position": {
+        "xPercent": 71,
+        "yPercent": 55
+      },
+      "gameCoordinates": null,
+      "areaName": "待实测区域",
+      "riskLevel": "high",
+      "linkedRecordIds": [],
+      "routeHint": "等待危险区域实测。",
+      "relatedGuides": ["map.html"],
+      "notes": "占位风险点。"
+    }
+  ]
+}

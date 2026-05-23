@@ -1,16 +1,33 @@
-[
-  {
-    "version": "Early Access",
-    "date": "2026-05-14",
-    "title": "EA 版本资料库结构启动",
-    "summary": "建立版本追踪页面，用来记录官方更新、资料影响范围和需要复核的攻略。",
-    "impact": "所有资源、蓝图和地图点位都需要标注版本。"
-  },
-  {
-    "version": "资料库规划",
-    "date": "2026-05-22",
-    "title": "第一阶段内容框架",
-    "summary": "优先建设互动地图、资源位置、蓝图坐标、合成配方和新手路线。",
-    "impact": "先上结构，再逐步填充实测内容。"
-  }
-]
+{
+  "schemaVersion": 1,
+  "kind": "updates",
+  "updatedAt": "2026-05-23",
+  "records": [
+    {
+      "id": "ea-launch-tracker",
+      "version": "Early Access",
+      "date": "2026-05-14",
+      "title": "EA 版本资料库结构启动",
+      "sourceUrl": null,
+      "summary": "建立版本追踪页面，用来记录官方更新、资料影响范围和需要复核的攻略。",
+      "impact": "所有资源、蓝图、配方和地图点位都需要标注版本。",
+      "affectedRecordIds": ["silver-ore", "scanner", "scanner-recipe", "map-silver-sample"],
+      "status": "needs-verification",
+      "relatedGuides": ["updates.html"],
+      "notes": "正式整理更新日志时应补充官方来源链接。"
+    },
+    {
+      "id": "phase-1-content-frame",
+      "version": "资料库规划",
+      "date": "2026-05-23",
+      "title": "第一阶段内容框架",
+      "sourceUrl": null,
+      "summary": "优先建设互动地图、资源位置、蓝图坐标、合成配方和新手路线。",
+      "impact": "先上结构，再逐步填充实测内容。",
+      "affectedRecordIds": [],
+      "status": "placeholder",
+      "relatedGuides": ["README.md"],
+      "notes": "这是本站规划记录，不是游戏版本更新。"
+    }
+  ]
+}

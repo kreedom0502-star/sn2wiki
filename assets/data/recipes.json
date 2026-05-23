@@ -1,26 +1,106 @@
-[
-  {
-    "id": "scanner-recipe",
-    "name": "扫描器",
-    "type": "tool",
-    "materials": ["铜矿样例", "电池样例"],
-    "purpose": "扫描蓝图、生物和环境资料",
-    "blueprint": "扫描器"
-  },
-  {
-    "id": "oxygen-tank",
-    "name": "高容量氧气瓶",
-    "type": "survival",
-    "materials": ["钛样例", "玻璃样例", "银矿样例"],
-    "purpose": "延长早期探索时间",
-    "blueprint": "待确认"
-  },
-  {
-    "id": "base-builder-recipe",
-    "name": "基地建造器",
-    "type": "base",
-    "materials": ["钛样例", "电子元件样例"],
-    "purpose": "建造基地和功能模块",
-    "blueprint": "基地建造器"
-  }
-]
+{
+  "schemaVersion": 1,
+  "kind": "recipes",
+  "updatedAt": "2026-05-23",
+  "records": [
+    {
+      "id": "scanner-recipe",
+      "name": "扫描器",
+      "aliases": ["scanner recipe", "扫描器配方"],
+      "category": "tool",
+      "recipeType": "tool",
+      "stage": "early",
+      "version": "unknown",
+      "status": "needs-verification",
+      "lastVerified": null,
+      "summary": "扫描蓝图、生物和环境资料的基础工具配方，材料数量等待实测。",
+      "craftedItemId": "scanner",
+      "requiresBlueprintId": "scanner",
+      "materials": [
+        {
+          "resourceId": "copper-ore",
+          "name": "铜矿样例",
+          "quantity": null,
+          "status": "needs-verification"
+        },
+        {
+          "resourceId": null,
+          "name": "电池样例",
+          "quantity": null,
+          "status": "placeholder"
+        }
+      ],
+      "relatedGuides": ["guides/beginner-route.html"],
+      "mapPointIds": [],
+      "notes": "不要把样例材料当作正式配方。"
+    },
+    {
+      "id": "high-capacity-o2-tank",
+      "name": "高容量氧气瓶",
+      "aliases": ["oxygen tank", "氧气瓶", "o2 tank"],
+      "category": "survival",
+      "recipeType": "survival",
+      "stage": "early",
+      "version": "unknown",
+      "status": "placeholder",
+      "lastVerified": null,
+      "summary": "用于延长探索时间的生存配方结构示例。",
+      "craftedItemId": null,
+      "requiresBlueprintId": null,
+      "materials": [
+        {
+          "resourceId": "titanium",
+          "name": "钛样例",
+          "quantity": null,
+          "status": "placeholder"
+        },
+        {
+          "resourceId": null,
+          "name": "玻璃样例",
+          "quantity": null,
+          "status": "placeholder"
+        },
+        {
+          "resourceId": "silver-ore",
+          "name": "银矿样例",
+          "quantity": null,
+          "status": "placeholder"
+        }
+      ],
+      "relatedGuides": ["guides/beginner-route.html"],
+      "mapPointIds": [],
+      "notes": "正式填充前需验证名称和材料。"
+    },
+    {
+      "id": "base-builder-recipe",
+      "name": "基地建造器",
+      "aliases": ["builder recipe", "基地建造器配方"],
+      "category": "base",
+      "recipeType": "base",
+      "stage": "early",
+      "version": "unknown",
+      "status": "needs-verification",
+      "lastVerified": null,
+      "summary": "建造基地和功能模块的关键工具配方。",
+      "craftedItemId": "base-builder",
+      "requiresBlueprintId": "base-builder",
+      "materials": [
+        {
+          "resourceId": "titanium",
+          "name": "钛样例",
+          "quantity": null,
+          "status": "placeholder"
+        },
+        {
+          "resourceId": null,
+          "name": "电子元件样例",
+          "quantity": null,
+          "status": "placeholder"
+        }
+      ],
+      "relatedGuides": ["guides/index.html"],
+      "mapPointIds": [],
+      "notes": "后续与基地建造推荐强关联。"
+    }
+  ]
+}

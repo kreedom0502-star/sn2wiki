@@ -1,26 +1,67 @@
-[
-  {
-    "id": "scanner",
-    "name": "扫描器",
-    "type": "tool",
-    "unlock": "待整理蓝图来源",
-    "related": "蓝图扫描、资源识别、图鉴解锁",
-    "status": "样例数据"
-  },
-  {
-    "id": "base-builder",
-    "name": "基地建造器",
-    "type": "base",
-    "unlock": "待整理蓝图来源",
-    "related": "基地结构、电力、储物与生产设施",
-    "status": "样例数据"
-  },
-  {
-    "id": "vehicle-bay",
-    "name": "载具解锁链",
-    "type": "vehicle",
-    "unlock": "待整理组件与扫描点",
-    "related": "载具制造、升级模块、探索深度",
-    "status": "样例数据"
-  }
-]
+{
+  "schemaVersion": 1,
+  "kind": "blueprints",
+  "updatedAt": "2026-05-23",
+  "records": [
+    {
+      "id": "scanner",
+      "name": "扫描器",
+      "aliases": ["scanner", "扫描工具"],
+      "category": "tool",
+      "blueprintType": "tool",
+      "stage": "early",
+      "version": "unknown",
+      "status": "needs-verification",
+      "lastVerified": null,
+      "summary": "用于扫描蓝图、生物和环境资料，是资料库内容链路里的关键工具。",
+      "unlockMethod": "unknown",
+      "fragmentsRequired": null,
+      "prerequisites": [],
+      "relatedResourceIds": ["copper-ore", "silver-ore"],
+      "relatedRecipeIds": ["scanner-recipe"],
+      "relatedGuides": ["guides/beginner-route.html"],
+      "mapPointIds": ["map-scanner-sample"],
+      "notes": "正式攻略需要补充获取方式和版本。"
+    },
+    {
+      "id": "base-builder",
+      "name": "基地建造器",
+      "aliases": ["builder", "habitat builder", "建造器"],
+      "category": "base",
+      "blueprintType": "base",
+      "stage": "early",
+      "version": "unknown",
+      "status": "needs-verification",
+      "lastVerified": null,
+      "summary": "用于建造基地结构和功能模块，是基地选址内容的核心前置。",
+      "unlockMethod": "unknown",
+      "fragmentsRequired": null,
+      "prerequisites": [],
+      "relatedResourceIds": ["titanium"],
+      "relatedRecipeIds": ["base-builder-recipe"],
+      "relatedGuides": ["guides/index.html"],
+      "mapPointIds": [],
+      "notes": "后续和基地建造推荐页互链。"
+    },
+    {
+      "id": "vehicle-unlock-chain",
+      "name": "载具解锁链",
+      "aliases": ["vehicle", "载具", "载具舱", "vehicle bay"],
+      "category": "vehicle",
+      "blueprintType": "vehicle",
+      "stage": "mid",
+      "version": "unknown",
+      "status": "placeholder",
+      "lastVerified": null,
+      "summary": "用于承载载具解锁、组件扫描点和升级模块的内容结构。",
+      "unlockMethod": "unknown",
+      "fragmentsRequired": null,
+      "prerequisites": ["scanner"],
+      "relatedResourceIds": [],
+      "relatedRecipeIds": [],
+      "relatedGuides": ["guides/index.html"],
+      "mapPointIds": [],
+      "notes": "等待实测后拆成具体载具和组件条目。"
+    }
+  ]
+}
