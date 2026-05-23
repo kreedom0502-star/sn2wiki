@@ -1,6 +1,6 @@
 {
   "siteName": "Subnautica 2 中文资料库",
-  "siteUrl": "https://subnautica2-cn.example.com",
+  "siteUrl": "https://sn2wiki.pages.dev",
   "defaultImage": "/assets/img/map-preview.svg",
   "defaultLocale": "zh_CN",
   "pages": {
@@ -10,7 +10,9 @@
       "type": "WebSite",
       "priority": "1.0",
       "changefreq": "daily",
-      "breadcrumbs": ["首页"]
+      "breadcrumbs": [
+        "首页"
+      ]
     },
     "map.html": {
       "title": "互动地图 - Subnautica 2 中文资料库",
@@ -18,7 +20,10 @@
       "type": "WebPage",
       "priority": "0.9",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "互动地图"]
+      "breadcrumbs": [
+        "首页",
+        "互动地图"
+      ]
     },
     "resources.html": {
       "title": "资源位置 - Subnautica 2 中文资料库",
@@ -26,7 +31,10 @@
       "type": "CollectionPage",
       "priority": "0.9",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "资源位置"]
+      "breadcrumbs": [
+        "首页",
+        "资源位置"
+      ]
     },
     "blueprints.html": {
       "title": "蓝图位置 - Subnautica 2 中文资料库",
@@ -34,7 +42,10 @@
       "type": "CollectionPage",
       "priority": "0.8",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "蓝图位置"]
+      "breadcrumbs": [
+        "首页",
+        "蓝图位置"
+      ]
     },
     "recipes.html": {
       "title": "合成配方 - Subnautica 2 中文资料库",
@@ -42,7 +53,10 @@
       "type": "CollectionPage",
       "priority": "0.8",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "合成配方"]
+      "breadcrumbs": [
+        "首页",
+        "合成配方"
+      ]
     },
     "updates.html": {
       "title": "更新日志 - Subnautica 2 中文资料库",
@@ -50,7 +64,10 @@
       "type": "CollectionPage",
       "priority": "0.8",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "更新日志"]
+      "breadcrumbs": [
+        "首页",
+        "更新日志"
+      ]
     },
     "guides/index.html": {
       "title": "新手攻略 - Subnautica 2 中文资料库",
@@ -58,7 +75,10 @@
       "type": "CollectionPage",
       "priority": "0.8",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "新手攻略"]
+      "breadcrumbs": [
+        "首页",
+        "新手攻略"
+      ]
     },
     "guides/beginner-route.html": {
       "title": "Subnautica 2 新手开局路线推荐 - 中文资料库",
@@ -66,7 +86,11 @@
       "type": "Article",
       "priority": "0.7",
       "changefreq": "monthly",
-      "breadcrumbs": ["首页", "新手攻略", "新手开局路线"]
+      "breadcrumbs": [
+        "首页",
+        "新手攻略",
+        "新手开局路线"
+      ]
     },
     "guides/silver-location.html": {
       "title": "Subnautica 2 银矿位置：前期用途、地图入口与实测待办",
@@ -74,7 +98,11 @@
       "type": "Article",
       "priority": "0.8",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "新手攻略", "银矿位置"]
+      "breadcrumbs": [
+        "首页",
+        "新手攻略",
+        "银矿位置"
+      ]
     },
     "guides/copper-location.html": {
       "title": "Subnautica 2 铜矿位置：前期采集路线与用途整理",
@@ -82,7 +110,11 @@
       "type": "Article",
       "priority": "0.8",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "新手攻略", "铜矿位置"]
+      "breadcrumbs": [
+        "首页",
+        "新手攻略",
+        "铜矿位置"
+      ]
     },
     "guides/lead-location.html": {
       "title": "Subnautica 2 铅位置：获取区域、风险与用途待实测",
@@ -90,7 +122,11 @@
       "type": "Article",
       "priority": "0.7",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "新手攻略", "铅位置"]
+      "breadcrumbs": [
+        "首页",
+        "新手攻略",
+        "铅位置"
+      ]
     },
     "guides/vehicle-unlock.html": {
       "title": "Subnautica 2 载具解锁方法：蓝图、材料与路线模板",
@@ -98,7 +134,11 @@
       "type": "Article",
       "priority": "0.8",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "新手攻略", "载具解锁"]
+      "breadcrumbs": [
+        "首页",
+        "新手攻略",
+        "载具解锁"
+      ]
     },
     "guides/multiplayer-crossplay-save.html": {
       "title": "Subnautica 2 联机、跨平台与存档问题整理",
@@ -106,7 +146,11 @@
       "type": "Article",
       "priority": "0.7",
       "changefreq": "weekly",
-      "breadcrumbs": ["首页", "新手攻略", "联机跨平台存档"]
+      "breadcrumbs": [
+        "首页",
+        "新手攻略",
+        "联机跨平台存档"
+      ]
     }
   }
 }

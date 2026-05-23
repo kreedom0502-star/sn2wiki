@@ -2,21 +2,32 @@
 
 当前 SEO 配置以 `assets/data/seo.json` 为中心，配合 `assets/js/seo.js` 注入 canonical、Open Graph、Twitter Card 和 JSON-LD。
 
-## 上线前必须修改
+## 当前站点域名
 
-当前域名是占位：
+当前免费部署域名：
 
 ```text
-https://subnautica2-cn.example.com
+https://sn2wiki.pages.dev
 ```
 
-正式上线前需要同时替换：
+如果以后购买正式域名，例如：
+
+```text
+https://sn2wiki.com
+```
+
+需要同时替换：
 
 - `assets/data/seo.json` 里的 `siteUrl`
 - `robots.txt` 里的 `Sitemap`
 - `sitemap.xml` 里的所有 `<loc>`
 
-不要带着 `.example.com` 域名上线。
+可以使用项目脚本统一替换：
+
+```bash
+node tools/set-site-url.mjs https://sn2wiki.com
+node tools/validate-site.mjs --strict-domain
+```
 
 ## 页面元信息规则
 
