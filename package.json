@@ -4,6 +4,7 @@
   "private": true,
   "description": "Subnautica 2 中文资料库静态站点。",
   "scripts": {
+    "build": "node tools/build-static.mjs",
     "preview": "node tools/static-server.mjs 4173",
     "check": "node tools/validate-site.mjs",
     "check:deploy": "node tools/validate-site.mjs --strict-domain",

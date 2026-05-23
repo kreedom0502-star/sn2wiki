@@ -4,6 +4,7 @@ import { dirname, join, normalize, relative, sep } from "node:path";
 const root = process.cwd();
 const strictDomain = process.argv.includes("--strict-domain");
 const htmlFiles = [];
+const ignoredDirectories = new Set([".git", "dist", "node_modules"]);
 const dataFiles = [
   "assets/data/resources.json",
   "assets/data/blueprints.json",
@@ -15,7 +16,7 @@ const dataFiles = [
 
 function walk(directory) {
   for (const name of readdirSync(directory)) {
-    if (name === ".git" || name === "node_modules") continue;
+    if (ignoredDirectories.has(name)) continue;
     const fullPath = join(directory, name);
     const stats = statSync(fullPath);
     if (stats.isDirectory()) {
