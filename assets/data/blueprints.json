@@ -39,7 +39,7 @@
       "prerequisites": [],
       "relatedResourceIds": ["titanium"],
       "relatedRecipeIds": ["base-builder-recipe"],
-      "relatedGuides": ["guides/index.html"],
+      "relatedGuides": ["guides/vehicle-unlock.html", "guides/index.html"],
       "mapPointIds": [],
       "notes": "后续和基地建造推荐页互链。"
     },

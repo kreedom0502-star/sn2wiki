@@ -26,7 +26,7 @@
       ],
       "relatedBlueprintIds": ["scanner"],
       "relatedRecipeIds": ["high-capacity-o2-tank"],
-      "relatedGuides": ["resources.html#silver-ore"],
+      "relatedGuides": ["guides/silver-location.html", "resources.html#silver-ore"],
       "mapPointIds": ["map-silver-sample"],
       "notes": "首批高搜索意图资源页。"
     },
@@ -53,7 +53,7 @@
       ],
       "relatedBlueprintIds": ["scanner"],
       "relatedRecipeIds": ["scanner-recipe"],
-      "relatedGuides": ["resources.html#copper-ore"],
+      "relatedGuides": ["guides/copper-location.html", "resources.html#copper-ore"],
       "mapPointIds": [],
       "notes": "适合做前期资源合集页。"
     },
@@ -80,7 +80,7 @@
       ],
       "relatedBlueprintIds": [],
       "relatedRecipeIds": [],
-      "relatedGuides": ["resources.html#lead"],
+      "relatedGuides": ["guides/lead-location.html", "resources.html#lead"],
       "mapPointIds": [],
       "notes": "搜索意图较高，但不要提前伪造路线。"
     },

@@ -23,7 +23,7 @@
       "riskLevel": "unknown",
       "linkedRecordIds": ["silver-ore"],
       "routeHint": "等待游戏内实测路线。",
-      "relatedGuides": ["resources.html#silver-ore"],
+      "relatedGuides": ["guides/silver-location.html", "resources.html#silver-ore"],
       "notes": "占位点位，不代表真实资源位置。"
     },
     {
@@ -46,7 +46,7 @@
       "riskLevel": "unknown",
       "linkedRecordIds": ["scanner"],
       "routeHint": "等待游戏内实测路线。",
-      "relatedGuides": ["blueprints.html"],
+      "relatedGuides": ["guides/beginner-route.html", "blueprints.html"],
       "notes": "占位点位，不代表真实蓝图位置。"
     },
     {
