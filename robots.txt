@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sn2wiki.pages.dev/sitemap.xml
+Sitemap: https://sn2wiki.kreedom0502.workers.dev/sitemap.xml
