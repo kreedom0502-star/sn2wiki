@@ -15,22 +15,35 @@
       "category": "ore",
       "resourceType": "ore",
       "stage": "early",
-      "version": "unknown",
-      "status": "needs-verification",
-      "lastVerified": null,
+      "version": "early-access",
+      "status": "public-guide",
+      "lastVerified": "2026-05-23",
       "rarity": "uncommon",
-      "summary": "前期电子、工具和升级制作链的高优先级资源，正式点位等待游戏内路线、深度和风险复核。",
+      "summary": "前期氧气、电子和升级制作链的高优先级资源，推荐从 Lifepod 北侧、Camp One 附近和遗迹洞穴路线寻找。",
       "uses": [
+        "氧气装备",
         "电子部件",
         "工具制作",
         "升级材料"
       ],
       "locations": [
         {
-          "name": "待实测采集区",
+          "name": "Lifepod 北侧洞穴",
           "biomeId": null,
           "depthRange": null,
-          "notes": "后续按区域、深度、路线、风险和地图点位补全，不写未经验证的固定坐标。"
+          "notes": "从 Lifepod 往北或北偏东推进，留意遗迹建筑、发光植物和隐藏洞口。"
+        },
+        {
+          "name": "Camp One / Anita Black Box 附近洞穴",
+          "biomeId": null,
+          "depthRange": null,
+          "notes": "适合作为第二条银矿路线，重点搜索洞穴墙壁和小节点。"
+        },
+        {
+          "name": "地热区外围",
+          "biomeId": null,
+          "depthRange": null,
+          "notes": "后续可找大型银矿矿块，建议有更好装备后再去。"
         }
       ],
       "relatedBlueprintIds": [
@@ -46,7 +59,7 @@
       "mapPointIds": [
         "map-silver-sample"
       ],
-      "notes": "首批高搜索意图资源页，优先补充可复现路线。"
+      "notes": "页面前台采用攻略口吻，坐标和地图点位后续随版本继续精修。"
     },
     {
       "id": "copper-ore",
@@ -60,22 +73,35 @@
       "category": "ore",
       "resourceType": "ore",
       "stage": "early",
-      "version": "unknown",
-      "status": "needs-verification",
-      "lastVerified": null,
+      "version": "early-access",
+      "status": "public-guide",
+      "lastVerified": "2026-05-23",
       "rarity": "common",
-      "summary": "前期基础制作链常见消耗资源，适合和银矿、钛等材料一起做综合采集路线。",
+      "summary": "前期基础制作链常见消耗资源，最快从 Lifepod 正下方洞穴、Coral Dome 和东侧洞系刷取。",
       "uses": [
         "电力链",
         "基础工具",
-        "早期设备"
+        "早期设备",
+        "基地组件"
       ],
       "locations": [
         {
-          "name": "待实测采集区",
+          "name": "Lifepod 正下方洞穴",
           "biomeId": null,
           "depthRange": null,
-          "notes": "后续补充出生点附近路线、单趟产出和是否适合新手反复采集。"
+          "notes": "开局最快路线，检查洞穴墙壁、天花板和岩壁。"
+        },
+        {
+          "name": "Coral Dome 洞穴",
+          "biomeId": null,
+          "depthRange": null,
+          "notes": "从 Lifepod 往东约 30 米，适合补第二批铜矿。"
+        },
+        {
+          "name": "东侧约 130 米洞穴",
+          "biomeId": null,
+          "depthRange": null,
+          "notes": "适合反复刷铜矿节点和大矿块。"
         }
       ],
       "relatedBlueprintIds": [
@@ -89,7 +115,7 @@
         "resources.html#copper-ore"
       ],
       "mapPointIds": [],
-      "notes": "适合作为第一批资源攻略页之一。"
+      "notes": "适合作为第一批固定资源路线。"
     },
     {
       "id": "lead",
@@ -100,23 +126,35 @@
       ],
       "category": "ore",
       "resourceType": "ore",
-      "stage": "mid",
-      "version": "unknown",
-      "status": "needs-verification",
-      "lastVerified": null,
+      "stage": "early",
+      "version": "early-access",
+      "status": "public-guide",
+      "lastVerified": "2026-05-23",
       "rarity": "uncommon",
-      "summary": "中前期制作链待复核材料，位置、风险和配方消耗需要按版本实测。",
+      "summary": "前中期工具和矿块采集相关材料，推荐沿 Lifepod 70 度方向、蓝色水流盆地和 Cicada 残骸周边寻找。",
       "uses": [
-        "基地组件",
-        "防护类制作链",
-        "升级材料待核对"
+        "Sonic Resonator",
+        "电力/存储相关制作链",
+        "升级材料"
       ],
       "locations": [
         {
-          "name": "待实测采集区",
+          "name": "Lifepod 70 度方向路线",
           "biomeId": null,
           "depthRange": null,
-          "notes": "后续按深度、危险度和前置装备补充。"
+          "notes": "经过橙色珊瑚，找蓝色水流下方盆地和平台。"
+        },
+        {
+          "name": "Cicada 残骸周边",
+          "biomeId": null,
+          "depthRange": null,
+          "notes": "东北方向较远区域，适合氧气和路线准备更充足后前往。"
+        },
+        {
+          "name": "Camp One 以东",
+          "biomeId": null,
+          "depthRange": null,
+          "notes": "检查海床、残骸边缘和矿块集中区域。"
         }
       ],
       "relatedBlueprintIds": [],
@@ -126,7 +164,7 @@
         "resources.html#lead"
       ],
       "mapPointIds": [],
-      "notes": "搜索意图较高，但需要避免提前伪造路线。"
+      "notes": "小块可直接拾取，大型铅矿通常需要 Sonic Resonator。"
     },
     {
       "id": "titanium",
