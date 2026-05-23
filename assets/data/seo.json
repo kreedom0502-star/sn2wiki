@@ -81,11 +81,11 @@
       ]
     },
     "guides/beginner-route.html": {
-      "title": "Subnautica 2 新手开局路线推荐 - 中文资料库",
-      "description": "Subnautica 2 新手开局路线页面模板，包含快速答案、目标顺序、所需资源和版本验证记录。",
+      "title": "Subnautica 2 新手开局路线：前 1 小时目标、资源与蓝图优先级",
+      "description": "Subnautica 2 新手开局路线攻略，整理前 10 分钟、前 30 分钟、前 1 小时目标，资源优先级、蓝图解锁、基地选址和联机分工。",
       "type": "Article",
-      "priority": "0.7",
-      "changefreq": "monthly",
+      "priority": "0.8",
+      "changefreq": "weekly",
       "breadcrumbs": [
         "首页",
         "新手攻略",
