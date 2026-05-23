@@ -402,57 +402,222 @@ async function initUpdates() {
   `).join("");
 }
 
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function mapTypeClass(type) {
+  return `type-${type || "unknown"}`;
+}
+
+function renderLinkedIds(ids = []) {
+  if (!ids.length) return "暂无关联资料";
+  return ids.map((id) => `<span>${escapeHtml(id)}</span>`).join("");
+}
+
+function coordinatesText(item) {
+  if (!item.gameCoordinates) return "游戏坐标：待实测";
+  const { x, y, z } = item.gameCoordinates;
+  return `游戏坐标：${x}, ${y}, ${z}`;
+}
+
 async function initMap() {
   const pointsLayer = document.querySelector("#map-points");
   const detail = document.querySelector("#map-detail");
   const input = document.querySelector("#map-search");
-  const buttons = [...document.querySelectorAll("[data-map-filter]")];
+  const list = document.querySelector("#map-list");
+  const stats = document.querySelector("#map-stats");
+  const resultCount = document.querySelector("#map-result-count");
+  const resetButton = document.querySelector("#map-reset");
+  const legend = document.querySelector("#map-legend");
+  const typeButtons = [...document.querySelectorAll("[data-map-type]")];
+  const stageButtons = [...document.querySelectorAll("[data-map-stage]")];
+  const statusButtons = [...document.querySelectorAll("[data-map-status]")];
   const data = await loadRecords("map-points");
-  let active = "all";
+  const state = {
+    type: "all",
+    stage: "all",
+    status: "all",
+    query: "",
+    selectedId: null
+  };
+
+  const typeCounts = data.reduce((counts, item) => {
+    counts[item.pointType] = (counts[item.pointType] || 0) + 1;
+    return counts;
+  }, {});
+
+  if (legend) {
+    legend.innerHTML = ["resource", "blueprint", "base", "danger"]
+      .map((type) => `
+        <span class="legend-item">
+          <i class="legend-dot ${mapTypeClass(type)}"></i>
+          ${label(type)} ${typeCounts[type] || 0}
+        </span>
+      `).join("");
+  }
 
   const renderDetail = (item) => {
     detail.innerHTML = `
-      <strong>${item.name}</strong>
-      <span>${label(item.pointType)} · ${item.areaName}</span>
-      <span>${item.summary}</span>
-      <span>状态：${label(item.status)} · 风险：${label(item.riskLevel)}</span>
-      <a class="inline-map-link" href="${firstLink(item, "map.html")}">查看相关页面</a>
+      <span class="tag">${label(item.pointType)}</span>
+      <strong>${escapeHtml(item.name)}</strong>
+      <span>${escapeHtml(item.areaName)} · ${label(item.stage)} · ${label(item.version)}</span>
+      <p>${escapeHtml(item.summary)}</p>
+      <div class="data-meta">
+        ${renderTags([item.status, item.riskLevel])}
+      </div>
+      <dl class="detail-facts">
+        <div>
+          <dt>坐标</dt>
+          <dd>${escapeHtml(coordinatesText(item))}</dd>
+        </div>
+        <div>
+          <dt>路线</dt>
+          <dd>${escapeHtml(item.routeHint || "待补充")}</dd>
+        </div>
+      </dl>
+      <div class="linked-records">
+        <span>关联资料</span>
+        <div>${renderLinkedIds(item.linkedRecordIds)}</div>
+      </div>
+      <a class="inline-map-link" href="${escapeHtml(firstLink(item, "map.html"))}">查看相关页面</a>
     `;
   };
 
-  const render = () => {
-    const query = normalize(input?.value);
-    const items = data.filter((item) => {
-      const inFilter = active === "all" || item.pointType === active || item.category === active;
-      return inFilter && matchesQuery(item, query);
+  const updateStats = (items) => {
+    if (stats) {
+      const verified = items.filter((item) => item.status === "verified").length;
+      const pending = items.filter((item) => item.status === "needs-verification").length;
+      const placeholder = items.filter((item) => item.status === "placeholder").length;
+      stats.innerHTML = `
+        <span><strong>${items.length}</strong> 个可见点位</span>
+        <span>${verified} 已验证</span>
+        <span>${pending} 待实测</span>
+        <span>${placeholder} 占位</span>
+      `;
+    }
+    if (resultCount) {
+      resultCount.textContent = `${items.length} / ${data.length} 个点位`;
+    }
+  };
+
+  const getFilteredItems = () => {
+    return data.filter((item) => {
+      const inType = state.type === "all" || item.pointType === state.type || item.category === state.type;
+      const inStage = state.stage === "all" || item.stage === state.stage;
+      const inStatus = state.status === "all" || item.status === state.status;
+      return inType && inStage && inStatus && matchesQuery(item, state.query);
     });
+  };
+
+  const selectPoint = (id) => {
+    state.selectedId = id;
+    const item = data.find((entry) => entry.id === id);
+    if (item) renderDetail(item);
+    document.querySelectorAll("[data-map-point-id], [data-list-point-id]").forEach((node) => {
+      const nodeId = node.dataset.mapPointId || node.dataset.listPointId;
+      node.classList.toggle("selected", nodeId === id);
+    });
+  };
+
+  const render = () => {
+    const items = getFilteredItems();
 
     pointsLayer.innerHTML = items.map((item) => `
       <button
         class="map-point"
         type="button"
         data-type="${item.pointType}"
+        data-map-point-id="${item.id}"
         style="left: ${item.position.xPercent}%; top: ${item.position.yPercent}%"
         aria-label="${item.name}"
-        data-id="${item.id}">
+        title="${item.name}">
+        <span>${label(item.pointType).slice(0, 1)}</span>
       </button>
     `).join("");
 
+    if (list) {
+      list.innerHTML = items.length
+        ? items.map((item) => `
+            <button class="map-list-item" type="button" data-list-point-id="${item.id}">
+              <span class="map-list-type ${mapTypeClass(item.pointType)}">${label(item.pointType)}</span>
+              <strong>${escapeHtml(item.name)}</strong>
+              <small>${escapeHtml(item.areaName)} · ${label(item.status)}</small>
+            </button>
+          `).join("")
+        : `<div class="empty-state">没有找到匹配点位。</div>`;
+    }
+
     pointsLayer.querySelectorAll(".map-point").forEach((button) => {
-      button.addEventListener("click", () => {
-        const item = data.find((entry) => entry.id === button.dataset.id);
-        if (item) renderDetail(item);
-      });
+      button.addEventListener("click", () => selectPoint(button.dataset.mapPointId));
     });
+
+    list?.querySelectorAll(".map-list-item").forEach((button) => {
+      button.addEventListener("click", () => selectPoint(button.dataset.listPointId));
+    });
+
+    updateStats(items);
+
+    if (state.selectedId && items.some((item) => item.id === state.selectedId)) {
+      selectPoint(state.selectedId);
+    } else if (items.length) {
+      selectPoint(items[0].id);
+    } else {
+      state.selectedId = null;
+      detail.innerHTML = `
+        <span class="tag">空结果</span>
+        <strong>没有匹配点位</strong>
+        <span>调整搜索词、类型、阶段或状态筛选后再查看。</span>
+      `;
+    }
   };
 
-  buttons.forEach((button) => {
+  typeButtons.forEach((button) => {
     button.addEventListener("click", () => {
-      active = button.dataset.mapFilter;
-      setActiveButton(buttons, button);
+      state.type = button.dataset.mapType;
+      setActiveButton(typeButtons, button);
       render();
     });
   });
-  input?.addEventListener("input", render);
+
+  stageButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.stage = button.dataset.mapStage;
+      setActiveButton(stageButtons, button);
+      render();
+    });
+  });
+
+  statusButtons.forEach((button) => {
+    button.addEventListener("click", () => {
+      state.status = button.dataset.mapStatus;
+      setActiveButton(statusButtons, button);
+      render();
+    });
+  });
+
+  input?.addEventListener("input", () => {
+    state.query = normalize(input.value);
+    render();
+  });
+
+  resetButton?.addEventListener("click", () => {
+    state.type = "all";
+    state.stage = "all";
+    state.status = "all";
+    state.query = "";
+    state.selectedId = null;
+    if (input) input.value = "";
+    setActiveButton(typeButtons, typeButtons.find((button) => button.dataset.mapType === "all"));
+    setActiveButton(stageButtons, stageButtons.find((button) => button.dataset.mapStage === "all"));
+    setActiveButton(statusButtons, statusButtons.find((button) => button.dataset.mapStatus === "all"));
+    render();
+  });
+
   render();
 }

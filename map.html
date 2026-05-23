@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>互动地图 - Subnautica 2 中文资料库</title>
-  <meta name="description" content="Subnautica 2 互动地图，按资源、蓝图、基地推荐与危险区域筛选点位。">
+  <meta name="description" content="Subnautica 2 互动地图，按资源、蓝图、基地推荐、危险区域、阶段和资料状态筛选点位。">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body data-base="." data-page="map">
@@ -21,33 +21,83 @@
   </header>
 
   <main class="workspace page-shell">
-    <div class="page-title">
-      <p class="eyebrow">Interactive Map</p>
-      <h1>互动地图</h1>
-      <p>第一版先验证点位、筛选和弹窗结构。真实坐标需要后续游戏内实测后替换。</p>
+    <div class="page-title map-title-row">
+      <div>
+        <p class="eyebrow">Interactive Map</p>
+        <h1>互动地图</h1>
+        <p>用同一套点位数据承载资源、蓝图、基地候选区和危险提示。当前点位仍是开发占位，正式坐标需要游戏内实测后替换。</p>
+      </div>
+      <div class="map-version-card">
+        <span>资料状态</span>
+        <strong>待实测</strong>
+        <small>所有占位点位都不会作为正式攻略结论。</small>
+      </div>
     </div>
 
-    <section class="map-workbench">
+    <section class="map-workbench enhanced-map">
       <aside class="map-controls" aria-label="地图筛选">
-        <label for="map-search">搜索点位</label>
-        <input id="map-search" type="search" placeholder="搜索银矿、蓝图、基地...">
-        <div class="filter-stack" role="group" aria-label="点位类型">
-          <button class="chip active" data-map-filter="all" type="button">全部</button>
-          <button class="chip" data-map-filter="resource" type="button">资源</button>
-          <button class="chip" data-map-filter="blueprint" type="button">蓝图</button>
-          <button class="chip" data-map-filter="base" type="button">基地</button>
-          <button class="chip" data-map-filter="danger" type="button">危险</button>
+        <div class="map-search-row">
+          <label for="map-search">搜索点位</label>
+          <button id="map-reset" class="text-button" type="button">重置</button>
         </div>
-        <div id="map-detail" class="detail-panel">
-          <strong>选择一个点位</strong>
-          <span>这里会显示用途、区域、版本和相关页面。</span>
+        <input id="map-search" type="search" placeholder="搜索银矿、扫描器、基地、危险区域...">
+
+        <div class="map-filter-group" aria-label="点位类型">
+          <span class="filter-title">类型</span>
+          <div class="filter-stack">
+            <button class="chip active" data-map-type="all" type="button">全部</button>
+            <button class="chip" data-map-type="resource" type="button">资源</button>
+            <button class="chip" data-map-type="blueprint" type="button">蓝图</button>
+            <button class="chip" data-map-type="base" type="button">基地</button>
+            <button class="chip" data-map-type="danger" type="button">危险</button>
+          </div>
         </div>
+
+        <div class="map-filter-group" aria-label="游戏阶段">
+          <span class="filter-title">阶段</span>
+          <div class="filter-stack">
+            <button class="chip active" data-map-stage="all" type="button">全部</button>
+            <button class="chip" data-map-stage="early" type="button">前期</button>
+            <button class="chip" data-map-stage="mid" type="button">中期</button>
+            <button class="chip" data-map-stage="late" type="button">后期</button>
+            <button class="chip" data-map-stage="unknown" type="button">未知</button>
+          </div>
+        </div>
+
+        <div class="map-filter-group" aria-label="资料状态">
+          <span class="filter-title">状态</span>
+          <div class="filter-stack">
+            <button class="chip active" data-map-status="all" type="button">全部</button>
+            <button class="chip" data-map-status="placeholder" type="button">占位</button>
+            <button class="chip" data-map-status="needs-verification" type="button">待实测</button>
+            <button class="chip" data-map-status="verified" type="button">已验证</button>
+          </div>
+        </div>
+
+        <div id="map-stats" class="map-stats" aria-live="polite">
+          <span>载入点位中</span>
+        </div>
+
+        <div id="map-list" class="map-list" aria-label="点位列表"></div>
       </aside>
 
-      <div class="map-stage">
-        <img src="assets/img/map-preview.svg" alt="Subnautica 2 互动地图占位底图">
-        <div id="map-points" class="map-points" aria-label="地图点位"></div>
-      </div>
+      <section class="map-canvas-panel" aria-label="地图画布">
+        <div class="map-toolbar">
+          <div id="map-legend" class="map-legend" aria-label="图例"></div>
+          <span id="map-result-count" class="map-result-count" aria-live="polite">0 个点位</span>
+        </div>
+
+        <div class="map-stage">
+          <img src="assets/img/map-preview.svg" alt="Subnautica 2 互动地图占位底图">
+          <div id="map-points" class="map-points" aria-label="地图点位"></div>
+        </div>
+
+        <div id="map-detail" class="detail-panel map-detail-panel">
+          <span class="tag">未选择</span>
+          <strong>选择一个点位</strong>
+          <span>点位详情会显示类型、阶段、状态、风险、路线提示、关联资料和相关页面。</span>
+        </div>
+      </section>
     </section>
   </main>
 
