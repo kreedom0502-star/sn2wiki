@@ -1,0 +1,47 @@
+[
+  {
+    "id": "silver",
+    "name": "银矿",
+    "stage": "early",
+    "rarity": "前期关键",
+    "use": "电子元件、工具和升级材料的常见需求",
+    "area": "待实测区域",
+    "status": "样例数据，等待游戏内验证"
+  },
+  {
+    "id": "copper",
+    "name": "铜矿",
+    "stage": "early",
+    "rarity": "常用",
+    "use": "电线、基础工具和早期设备",
+    "area": "待实测区域",
+    "status": "样例数据，等待游戏内验证"
+  },
+  {
+    "id": "lead",
+    "name": "铅",
+    "stage": "mid",
+    "rarity": "中期材料",
+    "use": "基地与防护类制作链",
+    "area": "待实测区域",
+    "status": "样例数据，等待游戏内验证"
+  },
+  {
+    "id": "titanium",
+    "name": "钛",
+    "stage": "early",
+    "rarity": "基础材料",
+    "use": "基地结构、工具和大量基础配方",
+    "area": "待实测区域",
+    "status": "样例数据，等待游戏内验证"
+  },
+  {
+    "id": "rare-sample",
+    "name": "稀有资源样例",
+    "stage": "rare",
+    "rarity": "稀有",
+    "use": "用于后期升级和特殊配方的条目模板",
+    "area": "待实测区域",
+    "status": "占位条目"
+  }
+]

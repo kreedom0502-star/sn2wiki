@@ -1,0 +1,26 @@
+[
+  {
+    "id": "scanner-recipe",
+    "name": "扫描器",
+    "type": "tool",
+    "materials": ["铜矿样例", "电池样例"],
+    "purpose": "扫描蓝图、生物和环境资料",
+    "blueprint": "扫描器"
+  },
+  {
+    "id": "oxygen-tank",
+    "name": "高容量氧气瓶",
+    "type": "survival",
+    "materials": ["钛样例", "玻璃样例", "银矿样例"],
+    "purpose": "延长早期探索时间",
+    "blueprint": "待确认"
+  },
+  {
+    "id": "base-builder-recipe",
+    "name": "基地建造器",
+    "type": "base",
+    "materials": ["钛样例", "电子元件样例"],
+    "purpose": "建造基地和功能模块",
+    "blueprint": "基地建造器"
+  }
+]

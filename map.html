@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>互动地图 - Subnautica 2 中文资料库</title>
+  <meta name="description" content="Subnautica 2 互动地图，按资源、蓝图、基地推荐与危险区域筛选点位。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-base="." data-page="map">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">S2</span><span>Subnautica 2 中文资料库</span></a>
+    <nav class="main-nav" aria-label="主导航">
+      <a class="active" href="map.html">互动地图</a>
+      <a href="resources.html">资源</a>
+      <a href="blueprints.html">蓝图</a>
+      <a href="recipes.html">配方</a>
+      <a href="guides/index.html">新手攻略</a>
+      <a href="updates.html">更新日志</a>
+    </nav>
+  </header>
+
+  <main class="workspace page-shell">
+    <div class="page-title">
+      <p class="eyebrow">Interactive Map</p>
+      <h1>互动地图</h1>
+      <p>第一版先验证点位、筛选和弹窗结构。真实坐标需要后续游戏内实测后替换。</p>
+    </div>
+
+    <section class="map-workbench">
+      <aside class="map-controls" aria-label="地图筛选">
+        <label for="map-search">搜索点位</label>
+        <input id="map-search" type="search" placeholder="搜索银矿、蓝图、基地...">
+        <div class="filter-stack" role="group" aria-label="点位类型">
+          <button class="chip active" data-map-filter="all" type="button">全部</button>
+          <button class="chip" data-map-filter="resource" type="button">资源</button>
+          <button class="chip" data-map-filter="blueprint" type="button">蓝图</button>
+          <button class="chip" data-map-filter="base" type="button">基地</button>
+          <button class="chip" data-map-filter="danger" type="button">危险</button>
+        </div>
+        <div id="map-detail" class="detail-panel">
+          <strong>选择一个点位</strong>
+          <span>这里会显示用途、区域、版本和相关页面。</span>
+        </div>
+      </aside>
+
+      <div class="map-stage">
+        <img src="assets/img/map-preview.svg" alt="Subnautica 2 互动地图占位底图">
+        <div id="map-points" class="map-points" aria-label="地图点位"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>地图底图与点位为开发占位，正式内容应以游戏内实测和版本标注为准。</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

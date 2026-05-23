@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="title desc">
+  <title id="title">Subnautica 2 map placeholder</title>
+  <desc id="desc">A stylized ocean map placeholder for the Chinese reference site.</desc>
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#113a44"/>
+      <stop offset="0.46" stop-color="#0a6270"/>
+      <stop offset="1" stop-color="#10242b"/>
+    </linearGradient>
+    <radialGradient id="reef" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#8ad9c0" stop-opacity=".9"/>
+      <stop offset=".62" stop-color="#2a9a96" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#0a6270" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#c9f7ef" stroke-opacity=".09" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="960" height="720" fill="url(#sea)"/>
+  <rect width="960" height="720" fill="url(#grid)"/>
+  <path d="M139 388C188 231 374 171 497 216c91 33 133 113 245 122 65 5 112 38 103 91-16 91-170 136-291 130-137-6-226 66-331 30-88-30-112-111-84-201z" fill="url(#reef)" opacity=".9"/>
+  <path d="M320 163c88-68 230-64 278 12 50 80-8 171-118 181-111 10-245-46-259-110-7-33 30-64 99-83z" fill="#a9f0db" opacity=".16"/>
+  <path d="M585 488c74-48 165-37 201 18 32 49 0 94-74 111-96 22-213-15-221-72-3-22 26-42 94-57z" fill="#f6c15b" opacity=".16"/>
+  <path d="M130 157c104-83 255-94 284-21 28 71-80 148-211 153-85 4-141-19-152-61-7-27 19-51 79-71z" fill="#ffffff" opacity=".08"/>
+  <g fill="none" stroke="#e9fffb" stroke-opacity=".24" stroke-width="2">
+    <path d="M96 612c128-28 233-29 344-8 104 19 220 24 424-16"/>
+    <path d="M84 111c111 35 232 45 361 31 139-16 265-2 382 41"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="18" fill="#dff8f4" opacity=".84">
+    <text x="48" y="64">REFERENCE MAP DRAFT</text>
+    <text x="48" y="690">EA DATA LAYER PLACEHOLDER</text>
+  </g>
+  <g>
+    <circle cx="326" cy="302" r="9" fill="#d98d00" stroke="#fff" stroke-width="3"/>
+    <circle cx="554" cy="252" r="9" fill="#5b5ea6" stroke="#fff" stroke-width="3"/>
+    <circle cx="442" cy="446" r="9" fill="#007c89" stroke="#fff" stroke-width="3"/>
+    <circle cx="682" cy="398" r="9" fill="#c44f3f" stroke="#fff" stroke-width="3"/>
+  </g>
+</svg>

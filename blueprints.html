@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>蓝图位置 - Subnautica 2 中文资料库</title>
+  <meta name="description" content="Subnautica 2 蓝图位置资料库，整理工具、基地组件、载具和升级模块的获取方式。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-base="." data-page="blueprints">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">S2</span><span>Subnautica 2 中文资料库</span></a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="map.html">互动地图</a>
+      <a href="resources.html">资源</a>
+      <a class="active" href="blueprints.html">蓝图</a>
+      <a href="recipes.html">配方</a>
+      <a href="guides/index.html">新手攻略</a>
+      <a href="updates.html">更新日志</a>
+    </nav>
+  </header>
+
+  <main class="workspace page-shell">
+    <div class="page-title">
+      <p class="eyebrow">Blueprints</p>
+      <h1>蓝图位置</h1>
+      <p>用于承载扫描点、解锁条件、相关材料与地图跳转。正式内容需要按版本复核。</p>
+    </div>
+
+    <section class="tool-row" aria-label="蓝图筛选">
+      <input id="blueprint-search" type="search" placeholder="搜索扫描器、基地、载具...">
+      <div class="filter-row">
+        <button class="chip active" data-blueprint-filter="all" type="button">全部</button>
+        <button class="chip" data-blueprint-filter="tool" type="button">工具</button>
+        <button class="chip" data-blueprint-filter="base" type="button">基地</button>
+        <button class="chip" data-blueprint-filter="vehicle" type="button">载具</button>
+      </div>
+    </section>
+
+    <section id="blueprint-list" class="data-list" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>蓝图页面后续应与互动地图点位、合成配方和新手路线互链。</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

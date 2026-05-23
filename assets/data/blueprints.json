@@ -1,0 +1,26 @@
+[
+  {
+    "id": "scanner",
+    "name": "扫描器",
+    "type": "tool",
+    "unlock": "待整理蓝图来源",
+    "related": "蓝图扫描、资源识别、图鉴解锁",
+    "status": "样例数据"
+  },
+  {
+    "id": "base-builder",
+    "name": "基地建造器",
+    "type": "base",
+    "unlock": "待整理蓝图来源",
+    "related": "基地结构、电力、储物与生产设施",
+    "status": "样例数据"
+  },
+  {
+    "id": "vehicle-bay",
+    "name": "载具解锁链",
+    "type": "vehicle",
+    "unlock": "待整理组件与扫描点",
+    "related": "载具制造、升级模块、探索深度",
+    "status": "样例数据"
+  }
+]

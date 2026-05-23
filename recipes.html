@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>合成配方 - Subnautica 2 中文资料库</title>
+  <meta name="description" content="Subnautica 2 合成配方资料库，整理工具、基地、载具与升级模块所需材料。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-base="." data-page="recipes">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">S2</span><span>Subnautica 2 中文资料库</span></a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="map.html">互动地图</a>
+      <a href="resources.html">资源</a>
+      <a href="blueprints.html">蓝图</a>
+      <a class="active" href="recipes.html">配方</a>
+      <a href="guides/index.html">新手攻略</a>
+      <a href="updates.html">更新日志</a>
+    </nav>
+  </header>
+
+  <main class="workspace page-shell">
+    <div class="page-title">
+      <p class="eyebrow">Recipes</p>
+      <h1>合成配方</h1>
+      <p>第一版先定义配方展示方式：用途、材料、前置蓝图和相关资源入口。</p>
+    </div>
+
+    <section class="tool-row" aria-label="配方筛选">
+      <input id="recipe-search" type="search" placeholder="搜索扫描器、基地建造器、氧气瓶...">
+      <div class="filter-row">
+        <button class="chip active" data-recipe-filter="all" type="button">全部</button>
+        <button class="chip" data-recipe-filter="tool" type="button">工具</button>
+        <button class="chip" data-recipe-filter="survival" type="button">生存</button>
+        <button class="chip" data-recipe-filter="base" type="button">基地</button>
+      </div>
+    </section>
+
+    <section id="recipe-grid" class="data-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>配方数据后续可以扩展为材料反查：点击材料查看所有使用该材料的物品。</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

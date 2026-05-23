@@ -1,0 +1,42 @@
+[
+  {
+    "id": "point-silver",
+    "name": "银矿样例点",
+    "type": "resource",
+    "x": 34,
+    "y": 42,
+    "area": "待实测区域",
+    "note": "用于演示资源点筛选，正式坐标后续替换。",
+    "link": "resources.html#silver"
+  },
+  {
+    "id": "point-scanner",
+    "name": "扫描器蓝图样例",
+    "type": "blueprint",
+    "x": 58,
+    "y": 35,
+    "area": "待实测区域",
+    "note": "用于演示蓝图点位弹窗。",
+    "link": "blueprints.html"
+  },
+  {
+    "id": "point-base",
+    "name": "前期基地候选区",
+    "type": "base",
+    "x": 46,
+    "y": 62,
+    "area": "待评估区域",
+    "note": "后续按资源密度、危险度和交通路线评分。",
+    "link": "guides/index.html"
+  },
+  {
+    "id": "point-danger",
+    "name": "危险区域样例",
+    "type": "danger",
+    "x": 71,
+    "y": 55,
+    "area": "待实测区域",
+    "note": "用于提示高风险生物或深度限制。",
+    "link": "map.html"
+  }
+]

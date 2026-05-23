@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>资源位置 - Subnautica 2 中文资料库</title>
+  <meta name="description" content="Subnautica 2 资源位置资料库，整理银矿、铜矿、铅、钛等材料的用途、获取阶段与地图入口。">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-base="." data-page="resources">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">S2</span><span>Subnautica 2 中文资料库</span></a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="map.html">互动地图</a>
+      <a class="active" href="resources.html">资源</a>
+      <a href="blueprints.html">蓝图</a>
+      <a href="recipes.html">配方</a>
+      <a href="guides/index.html">新手攻略</a>
+      <a href="updates.html">更新日志</a>
+    </nav>
+  </header>
+
+  <main class="workspace page-shell">
+    <div class="page-title">
+      <p class="eyebrow">Resources</p>
+      <h1>资源位置</h1>
+      <p>按阶段、用途和稀有度管理材料页面。当前为样例数据，后续补充实测区域和路线。</p>
+    </div>
+
+    <section class="tool-row" aria-label="资源筛选">
+      <input id="resource-search" type="search" placeholder="搜索银矿、铜、载具材料...">
+      <div class="filter-row">
+        <button class="chip active" data-resource-filter="all" type="button">全部</button>
+        <button class="chip" data-resource-filter="early" type="button">前期</button>
+        <button class="chip" data-resource-filter="mid" type="button">中期</button>
+        <button class="chip" data-resource-filter="rare" type="button">稀有</button>
+      </div>
+    </section>
+
+    <section id="resource-grid" class="data-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="site-footer">
+    <p>每个资源条目后续应补充截图、路线、坐标与版本验证记录。</p>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
