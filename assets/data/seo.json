@@ -93,8 +93,8 @@
       ]
     },
     "guides/silver-location.html": {
-      "title": "Subnautica 2 银矿位置：前期用途、地图入口与实测待办",
-      "description": "Subnautica 2 银矿位置页面，整理银矿用途、前期采集路线模板、互动地图入口和待实测记录。",
+      "title": "Subnautica 2 银矿位置：前期用途、采集路线与地图点位",
+      "description": "Subnautica 2 银矿位置攻略，整理银矿用途、前期采集优先级、路线记录方法、地图入口和版本实测状态。",
       "type": "Article",
       "priority": "0.8",
       "changefreq": "weekly",
@@ -105,8 +105,8 @@
       ]
     },
     "guides/copper-location.html": {
-      "title": "Subnautica 2 铜矿位置：前期采集路线与用途整理",
-      "description": "Subnautica 2 铜矿位置页面，整理铜矿用途、前期资源路线、地图入口和待实测记录。",
+      "title": "Subnautica 2 铜矿位置：前期采集路线、用途与实测清单",
+      "description": "Subnautica 2 铜矿位置攻略，整理铜矿前期用途、采集路线设计、配方核对、地图点位和版本实测状态。",
       "type": "Article",
       "priority": "0.8",
       "changefreq": "weekly",
@@ -117,8 +117,8 @@
       ]
     },
     "guides/lead-location.html": {
-      "title": "Subnautica 2 铅位置：获取区域、风险与用途待实测",
-      "description": "Subnautica 2 铅位置页面，整理铅的用途方向、采集风险、互动地图入口和待实测记录。",
+      "title": "Subnautica 2 铅位置：获取区域、风险与用途整理",
+      "description": "Subnautica 2 铅位置攻略，整理铅的用途、获取区域记录方法、风险等级、采集前置条件和版本实测清单。",
       "type": "Article",
       "priority": "0.7",
       "changefreq": "weekly",

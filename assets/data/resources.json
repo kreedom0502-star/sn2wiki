@@ -6,7 +6,12 @@
     {
       "id": "silver-ore",
       "name": "银矿",
-      "aliases": ["silver", "silver ore", "银", "银矿石"],
+      "aliases": [
+        "silver",
+        "silver ore",
+        "银",
+        "银矿石"
+      ],
       "category": "ore",
       "resourceType": "ore",
       "stage": "early",
@@ -14,26 +19,44 @@
       "status": "needs-verification",
       "lastVerified": null,
       "rarity": "uncommon",
-      "summary": "前期电子元件和升级材料常见需求，正式位置等待游戏内实测。",
-      "uses": ["电子元件", "工具制作", "升级材料"],
+      "summary": "前期电子、工具和升级制作链的高优先级资源，正式点位等待游戏内路线、深度和风险复核。",
+      "uses": [
+        "电子部件",
+        "工具制作",
+        "升级材料"
+      ],
       "locations": [
         {
-          "name": "待实测区域",
+          "name": "待实测采集区",
           "biomeId": null,
           "depthRange": null,
-          "notes": "不要在正式攻略中写死坐标，等有实测路线后再补。"
+          "notes": "后续按区域、深度、路线、风险和地图点位补全，不写未经验证的固定坐标。"
         }
       ],
-      "relatedBlueprintIds": ["scanner"],
-      "relatedRecipeIds": ["high-capacity-o2-tank"],
-      "relatedGuides": ["guides/silver-location.html", "resources.html#silver-ore"],
-      "mapPointIds": ["map-silver-sample"],
-      "notes": "首批高搜索意图资源页。"
+      "relatedBlueprintIds": [
+        "scanner"
+      ],
+      "relatedRecipeIds": [
+        "high-capacity-o2-tank"
+      ],
+      "relatedGuides": [
+        "guides/silver-location.html",
+        "resources.html#silver-ore"
+      ],
+      "mapPointIds": [
+        "map-silver-sample"
+      ],
+      "notes": "首批高搜索意图资源页，优先补充可复现路线。"
     },
     {
       "id": "copper-ore",
       "name": "铜矿",
-      "aliases": ["copper", "copper ore", "铜", "铜矿石"],
+      "aliases": [
+        "copper",
+        "copper ore",
+        "铜",
+        "铜矿石"
+      ],
       "category": "ore",
       "resourceType": "ore",
       "stage": "early",
@@ -41,26 +64,40 @@
       "status": "needs-verification",
       "lastVerified": null,
       "rarity": "common",
-      "summary": "常见基础材料，用于电线、基础工具和早期设备。",
-      "uses": ["电线", "基础工具", "早期设备"],
+      "summary": "前期基础制作链常见消耗资源，适合和银矿、钛等材料一起做综合采集路线。",
+      "uses": [
+        "电力链",
+        "基础工具",
+        "早期设备"
+      ],
       "locations": [
         {
-          "name": "待实测区域",
+          "name": "待实测采集区",
           "biomeId": null,
           "depthRange": null,
-          "notes": "后续补充出生点附近路线。"
+          "notes": "后续补充出生点附近路线、单趟产出和是否适合新手反复采集。"
         }
       ],
-      "relatedBlueprintIds": ["scanner"],
-      "relatedRecipeIds": ["scanner-recipe"],
-      "relatedGuides": ["guides/copper-location.html", "resources.html#copper-ore"],
+      "relatedBlueprintIds": [
+        "scanner"
+      ],
+      "relatedRecipeIds": [
+        "scanner-recipe"
+      ],
+      "relatedGuides": [
+        "guides/copper-location.html",
+        "resources.html#copper-ore"
+      ],
       "mapPointIds": [],
-      "notes": "适合做前期资源合集页。"
+      "notes": "适合作为第一批资源攻略页之一。"
     },
     {
       "id": "lead",
       "name": "铅",
-      "aliases": ["lead", "铅矿"],
+      "aliases": [
+        "lead",
+        "铅矿"
+      ],
       "category": "ore",
       "resourceType": "ore",
       "stage": "mid",
@@ -68,26 +105,37 @@
       "status": "needs-verification",
       "lastVerified": null,
       "rarity": "uncommon",
-      "summary": "中前期制作链材料，具体用途和位置等待版本实测。",
-      "uses": ["基地组件", "防护类制作链"],
+      "summary": "中前期制作链待复核材料，位置、风险和配方消耗需要按版本实测。",
+      "uses": [
+        "基地组件",
+        "防护类制作链",
+        "升级材料待核对"
+      ],
       "locations": [
         {
-          "name": "待实测区域",
+          "name": "待实测采集区",
           "biomeId": null,
           "depthRange": null,
-          "notes": "后续按深度和危险度补充。"
+          "notes": "后续按深度、危险度和前置装备补充。"
         }
       ],
       "relatedBlueprintIds": [],
       "relatedRecipeIds": [],
-      "relatedGuides": ["guides/lead-location.html", "resources.html#lead"],
+      "relatedGuides": [
+        "guides/lead-location.html",
+        "resources.html#lead"
+      ],
       "mapPointIds": [],
-      "notes": "搜索意图较高，但不要提前伪造路线。"
+      "notes": "搜索意图较高，但需要避免提前伪造路线。"
     },
     {
       "id": "titanium",
       "name": "钛",
-      "aliases": ["titanium", "钛矿", "钛金属"],
+      "aliases": [
+        "titanium",
+        "钛矿",
+        "钛金属"
+      ],
       "category": "material",
       "resourceType": "material",
       "stage": "early",
@@ -96,7 +144,11 @@
       "lastVerified": null,
       "rarity": "common",
       "summary": "基础建造材料，用于基地结构、工具和大量基础配方。",
-      "uses": ["基地结构", "工具制作", "基础配方"],
+      "uses": [
+        "基地结构",
+        "工具制作",
+        "基础配方"
+      ],
       "locations": [
         {
           "name": "待实测区域",
@@ -105,16 +157,25 @@
           "notes": "后续补充常规获取方式。"
         }
       ],
-      "relatedBlueprintIds": ["base-builder"],
-      "relatedRecipeIds": ["base-builder-recipe", "high-capacity-o2-tank"],
-      "relatedGuides": ["resources.html#titanium"],
+      "relatedBlueprintIds": [
+        "base-builder"
+      ],
+      "relatedRecipeIds": [
+        "base-builder-recipe",
+        "high-capacity-o2-tank"
+      ],
+      "relatedGuides": [
+        "resources.html#titanium"
+      ],
       "mapPointIds": [],
       "notes": "可以和基地建造内容强互链。"
     },
     {
       "id": "rare-resource-sample",
       "name": "稀有资源样例",
-      "aliases": ["rare resource"],
+      "aliases": [
+        "rare resource"
+      ],
       "category": "material",
       "resourceType": "material",
       "stage": "late",
@@ -123,7 +184,10 @@
       "lastVerified": null,
       "rarity": "rare",
       "summary": "用于后期稀有资源条目的结构示例，不代表真实资料。",
-      "uses": ["后期升级", "特殊配方"],
+      "uses": [
+        "后期升级",
+        "特殊配方"
+      ],
       "locations": [],
       "relatedBlueprintIds": [],
       "relatedRecipeIds": [],
