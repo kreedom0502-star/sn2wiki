@@ -1,0 +1,112 @@
+{
+  "siteName": "Subnautica 2 中文资料库",
+  "siteUrl": "https://subnautica2-cn.example.com",
+  "defaultImage": "/assets/img/map-preview.svg",
+  "defaultLocale": "zh_CN",
+  "pages": {
+    "index.html": {
+      "title": "Subnautica 2 中文资料库 - 互动地图、资源位置、蓝图坐标",
+      "description": "Subnautica 2 中文资料库，整理互动地图、资源位置、蓝图坐标、合成配方、Early Access 更新日志与新手路线。",
+      "type": "WebSite",
+      "priority": "1.0",
+      "changefreq": "daily",
+      "breadcrumbs": ["首页"]
+    },
+    "map.html": {
+      "title": "互动地图 - Subnautica 2 中文资料库",
+      "description": "Subnautica 2 互动地图，按资源、蓝图、基地推荐、危险区域、阶段和资料状态筛选点位。",
+      "type": "WebPage",
+      "priority": "0.9",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "互动地图"]
+    },
+    "resources.html": {
+      "title": "资源位置 - Subnautica 2 中文资料库",
+      "description": "Subnautica 2 资源位置资料库，整理银矿、铜矿、铅、钛等材料的用途、获取阶段与地图入口。",
+      "type": "CollectionPage",
+      "priority": "0.9",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "资源位置"]
+    },
+    "blueprints.html": {
+      "title": "蓝图位置 - Subnautica 2 中文资料库",
+      "description": "Subnautica 2 蓝图位置资料库，整理工具、基地组件、载具和升级模块的获取方式。",
+      "type": "CollectionPage",
+      "priority": "0.8",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "蓝图位置"]
+    },
+    "recipes.html": {
+      "title": "合成配方 - Subnautica 2 中文资料库",
+      "description": "Subnautica 2 合成配方资料库，整理工具、基地、载具与升级模块所需材料。",
+      "type": "CollectionPage",
+      "priority": "0.8",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "合成配方"]
+    },
+    "updates.html": {
+      "title": "更新日志 - Subnautica 2 中文资料库",
+      "description": "Subnautica 2 Early Access 更新日志中文整理，追踪版本改动、攻略影响和页面复核状态。",
+      "type": "CollectionPage",
+      "priority": "0.8",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "更新日志"]
+    },
+    "guides/index.html": {
+      "title": "新手攻略 - Subnautica 2 中文资料库",
+      "description": "Subnautica 2 新手攻略入口，整理开局路线、资源位置、载具解锁、联机跨平台与存档问题。",
+      "type": "CollectionPage",
+      "priority": "0.8",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "新手攻略"]
+    },
+    "guides/beginner-route.html": {
+      "title": "Subnautica 2 新手开局路线推荐 - 中文资料库",
+      "description": "Subnautica 2 新手开局路线页面模板，包含快速答案、目标顺序、所需资源和版本验证记录。",
+      "type": "Article",
+      "priority": "0.7",
+      "changefreq": "monthly",
+      "breadcrumbs": ["首页", "新手攻略", "新手开局路线"]
+    },
+    "guides/silver-location.html": {
+      "title": "Subnautica 2 银矿位置：前期用途、地图入口与实测待办",
+      "description": "Subnautica 2 银矿位置页面，整理银矿用途、前期采集路线模板、互动地图入口和待实测记录。",
+      "type": "Article",
+      "priority": "0.8",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "新手攻略", "银矿位置"]
+    },
+    "guides/copper-location.html": {
+      "title": "Subnautica 2 铜矿位置：前期采集路线与用途整理",
+      "description": "Subnautica 2 铜矿位置页面，整理铜矿用途、前期资源路线、地图入口和待实测记录。",
+      "type": "Article",
+      "priority": "0.8",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "新手攻略", "铜矿位置"]
+    },
+    "guides/lead-location.html": {
+      "title": "Subnautica 2 铅位置：获取区域、风险与用途待实测",
+      "description": "Subnautica 2 铅位置页面，整理铅的用途方向、采集风险、互动地图入口和待实测记录。",
+      "type": "Article",
+      "priority": "0.7",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "新手攻略", "铅位置"]
+    },
+    "guides/vehicle-unlock.html": {
+      "title": "Subnautica 2 载具解锁方法：蓝图、材料与路线模板",
+      "description": "Subnautica 2 载具解锁方法页面，整理载具蓝图、材料、扫描点、前置条件和待实测记录。",
+      "type": "Article",
+      "priority": "0.8",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "新手攻略", "载具解锁"]
+    },
+    "guides/multiplayer-crossplay-save.html": {
+      "title": "Subnautica 2 联机、跨平台与存档问题整理",
+      "description": "Subnautica 2 联机、跨平台和存档问题页面，整理在线合作、跨平台多人、存档复核和常见问题记录。",
+      "type": "Article",
+      "priority": "0.7",
+      "changefreq": "weekly",
+      "breadcrumbs": ["首页", "新手攻略", "联机跨平台存档"]
+    }
+  }
+}
