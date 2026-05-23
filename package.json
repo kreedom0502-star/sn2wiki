@@ -1,0 +1,12 @@
+{
+  "name": "subnautica2-cn-database",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Subnautica 2 中文资料库静态站点。",
+  "scripts": {
+    "preview": "node tools/static-server.mjs 4173",
+    "check": "node tools/validate-site.mjs",
+    "check:deploy": "node tools/validate-site.mjs --strict-domain",
+    "set-site-url": "node tools/set-site-url.mjs"
+  }
+}

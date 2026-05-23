@@ -30,6 +30,7 @@ assets/js/main.js         搜索、筛选、地图点位渲染
 docs/data-schema.md       数据结构规范
 docs/guide-template.md    攻略文章模板
 docs/seo.md               SEO 配置与上线检查
+docs/deploy.md            部署准备与上线流程
 ```
 
 ## 内容原则
@@ -39,5 +40,6 @@ docs/seo.md               SEO 配置与上线检查
 - 新增或修改资料时，优先遵循 `docs/data-schema.md`。
 - 新增攻略文章时，优先遵循 `docs/guide-template.md`。
 - 新增页面时，补充 `assets/data/seo.json` 和 `sitemap.xml`。
+- 部署前阅读 `docs/deploy.md`，并用 `npm run check:deploy` 做严格检查。
 - 未实测内容只保留为样例或待验证，不写成确定坐标。
 - 官方 EA 更新后，先更新 `updates.html`，再标记受影响页面。
